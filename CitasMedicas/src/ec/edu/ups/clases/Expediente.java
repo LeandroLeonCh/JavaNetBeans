@@ -31,7 +31,6 @@ public class Expediente {
     public void setDetalles(String detalles) {
         this.detalles = detalles;
     }
-    //Leandro
-    //Wilson conce
+    //prueba 122434
     
 }

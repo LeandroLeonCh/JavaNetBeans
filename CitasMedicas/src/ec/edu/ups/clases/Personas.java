@@ -5,13 +5,16 @@
  */
 package ec.edu.ups.clases;
 
+import java.sql.Connection;
 import java.util.Date;
+
+import ec.edu.ups.conexion.ConecxionBD;
 
 /**
  *
  * @author wilso
  */
-public class Personas {
+public class Personas extends ConecxionBD{
     
     private int idPersona;
     private String nombre;
@@ -21,6 +24,7 @@ public class Personas {
     private String telefono;
     private String password;
     private int roll;
+    Connection con;
 
     public int getIdPersona() {
         return idPersona;

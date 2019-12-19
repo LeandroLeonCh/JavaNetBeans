@@ -117,7 +117,20 @@ public class Personas extends ConecxionBD{
     public int agregarPersona() {
     	con=getConnection();
     	try {
-    		ps=con.prepareStatement("INSERT INTO paciente (pac_nombre, pac_apellido, pac_fechaNacimiento")
+    		ps=con.prepareStatement("INSERT INTO paciente (pac_id, pac_nombre, pac_apellido, pac_fechaNacimiento"
+    				+ "pac_direccion, pac_telefono) VALUES("+getIdPersona()+","+getNombre()+","+getApellido()+","+getFechaNacimiento()
+    				+","+getDiereccion()+","+getTelefono()+")");
+    		ps.executeUpdate();
+    		contadorPersonasAgregadas++;
+    	}catch(SQLException e) {
+    		return 0;
+    	}finally {
+    		try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
     	}
     	return contadorPersonasAgregadas;
     }

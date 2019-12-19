@@ -29,6 +29,7 @@ public class Personas extends ConecxionBD{
     private int roll;
     Connection con;
     PreparedStatement ps=null;
+	int contadorPersonasAgregadas=0;
 
     public int getIdPersona() {
         return idPersona;
@@ -95,10 +96,10 @@ public class Personas extends ConecxionBD{
     }
     
     public int buscarPersona() {
-    	int contadorPersonasAgregadas=0;
+    
     	con=getConnection();
     	try {
-    		ps=con.prepareStatement("SELECT * FROM persona WHERE per_id ="+idPersona);
+    		ps=con.prepareStatement("SELECT * FROM paciente WHERE pac_id ="+getIdPersona());
     		ResultSet rs=ps.executeQuery();
     		
     	}catch(SQLException e) {
@@ -110,6 +111,13 @@ public class Personas extends ConecxionBD{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+    	}
+    	return contadorPersonasAgregadas;
+    }
+    public int agregarPersona() {
+    	con=getConnection();
+    	try {
+    		ps=con.prepareStatement("INSERT INTO paciente (pac_nombre, pac_apellido, pac_fechaNacimiento")
     	}
     	return contadorPersonasAgregadas;
     }

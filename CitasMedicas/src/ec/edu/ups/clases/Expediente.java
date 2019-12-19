@@ -31,6 +31,6 @@ public class Expediente {
     public void setDetalles(String detalles) {
         this.detalles = detalles;
     }
-    //no vale esta vrg 
+   //la plena que no vale esta huevada
     
 }

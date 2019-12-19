@@ -6,6 +6,9 @@
 package ec.edu.ups.clases;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
 import ec.edu.ups.conexion.ConecxionBD;
@@ -25,6 +28,7 @@ public class Personas extends ConecxionBD{
     private String password;
     private int roll;
     Connection con;
+    PreparedStatement ps=null;
 
     public int getIdPersona() {
         return idPersona;
@@ -90,6 +94,24 @@ public class Personas extends ConecxionBD{
         this.roll = roll;
     }
     
-    
+    public int buscarPersona() {
+    	int contadorPersonasAgregadas=0;
+    	con=getConnection();
+    	try {
+    		ps=con.prepareStatement("SELECT * FROM persona WHERE per_id ="+idPersona);
+    		ResultSet rs=ps.executeQuery();
+    		
+    	}catch(SQLException e) {
+    		return 0;
+    	}finally {
+    		try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	}
+    	return contadorPersonasAgregadas;
+    }
     
 }

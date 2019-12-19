@@ -31,9 +31,6 @@ public class Expediente {
     public void setDetalles(String detalles) {
         this.detalles = detalles;
     }
-    //Leandro
-    //Wilson conce
-    //David Egas Fernando
-    //borrando pureba v
+    //no vale esta vrg 
     
 }

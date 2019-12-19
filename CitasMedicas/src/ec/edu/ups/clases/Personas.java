@@ -20,7 +20,7 @@ public class Personas {
     private String diereccion;
     private String telefono;
     private String password;
-    private String roll;
+    private int roll;
 
     public int getIdPersona() {
         return idPersona;
@@ -78,13 +78,14 @@ public class Personas {
         this.password = password;
     }
 
-    public String getRoll() {
+    public int getRoll() {
         return roll;
     }
 
-    public void setRoll(String roll) {
+    public void setRoll(int roll) {
         this.roll = roll;
     }
+    
     
     
 }

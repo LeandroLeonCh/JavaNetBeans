@@ -33,6 +33,6 @@ public class Expediente {
     }
     //Leandro
     //Wilson conce
-    //David EgAS
+    //David Egas Fernando
     
 }

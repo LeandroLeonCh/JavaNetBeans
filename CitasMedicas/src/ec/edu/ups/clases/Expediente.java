@@ -31,6 +31,6 @@ public class Expediente {
     public void setDetalles(String detalles) {
         this.detalles = detalles;
     }
-    //prueba 122434
+    //prueba 12
     
 }

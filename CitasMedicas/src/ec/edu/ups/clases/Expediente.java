@@ -34,6 +34,6 @@ public class Expediente {
     //Leandro
     //Wilson conce
     //David Egas Fernando
-    //pruebav
+    //borrando pureba v
     
 }

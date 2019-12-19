@@ -32,5 +32,5 @@ public class Expediente {
         this.detalles = detalles;
     }
     //leandro leoon
-    
+    //bryan pintado
 }

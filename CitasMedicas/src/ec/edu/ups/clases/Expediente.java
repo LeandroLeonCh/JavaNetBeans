@@ -32,5 +32,6 @@ public class Expediente {
         this.detalles = detalles;
     }
     //leandro leoon
+    //Wilson conce
     
 }
